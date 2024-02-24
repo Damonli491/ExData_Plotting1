@@ -93,22 +93,30 @@ The four plots that you will need to construct are shown below.
 
 
 ### Plot 1
-
+png('plot1.png', width = 480, height = 480)
+hist(householdpowerconsumption$Globalactivepower, col = "red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)", ylab = "Frequency") dev.off()
 
 ![plot of chunk unnamed-chunk-2](figure/unnamed-chunk-2.png) 
 
 
 ### Plot 2
-
+png('png2.png', width = 480, height = 480)
+plot(householdpowerconsumption$Datetime, householdpowerconsumtpion$Globalactivepower, type = "l", col = "black", xlab = "Index", ylab = "Global Active Power (kilowatts)")
+dev.off()
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
 
 
 ### Plot 3
-
+png('png3.png', width = 480, height = 480)
+plot(householdpowerconsumption$Datetime, householdpowerconsumption$Submeeting1, col = "black", xlab = "", ylab = "Energy sub metering", lines(householdpowerconsumption$Datetime, householdpowerconsumption$Submetering2, col = "red", lines(householdpowerconsumption$Datetime, householdpowerconsumption$Submetering3, col = "blue", legend("topright", col = ("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3", lwd = 2, lty = "solid")
+dev.off()
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
 
 
 ### Plot 4
-
+png('png4.png', width = 480, height = 480)
+plot(householdpowerconsumption$Datetime, householdpowerconsumption$Globalactivepower, type = "l", xlab = "", ylab = "Global Active Power (kilowatts)", plot(householdpowerconsumption$Datetime, householdpowerconsumption$Voltage, type = "l", xlab = "Daytime", ylab = "Voltage"), plot(householdpowerconsumption$Datetime, householdpowerconsumption$Submetering1, xlab = "", ylab = "Energy sub metering") lines(householdpowerconsumption$Submetering2, col = "red"), lines(householdpowerconsumption$Datetime, householdpowerconsumption$Submetering3, col = "blue"), legend("topright", col = c("black", "red", "blue"), legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lwd = 2, lty = "solid")
+plot(householdpowerconsumption$Datetime, householdpowerconsumption$Globalreactivepower, type = "l", xlab = "Daytime", ylab = "Global Reactive Power (kilowatts)
+dev.off()
 ![plot of chunk unnamed-chunk-5](figure/unnamed-chunk-5.png) 
 
